@@ -1,0 +1,45 @@
+<!-- {% load static %} -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Online Food Shopping Mall</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="#"><h1>Allergen</h1></a>
+        </div>
+        <div class="search">
+          <form action="{% url 'search' %}" method="get">
+            <input type="text" placeholder="원하는 상품을 검색해보세요">
+            <button type="submit">Go</button>
+          </form>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'board' %}">Board</a></li>
+            <li><a href="{% static '#contact' %}">Login</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+        <div class="food-details">
+            <img src="{% static 'food-image.jpg' %}" alt="Food Image">
+            <div class="food-info">
+            <h2>Food Name</h2>
+            <p>Description information about the food.</p>
+            <button>Buy Now</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+      <div class="color-blocks"></div>
+    </footer>
+  </body>
+  <script src="app.js"></script>
+</html>

@@ -170,4 +170,36 @@ body {
   }
   
 
+  .food-details {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .food-info {
+    margin-left: 20px;
+  }
+  
+  .food-info h2 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .food-info p {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  .food-info button {
+    background-color: #F9A826;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .food-info button:hover {
+    background-color: #F27D23;
+  }
   
