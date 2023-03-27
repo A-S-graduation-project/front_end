@@ -33,7 +33,10 @@
             <div class="food-info">
             <h2>Food Name</h2>
             <p>Description information about the food.</p>
-            <button>Buy Now</button>
+            <form action="https://search.shopping.naver.com/search/all" method="GET">
+                <input type="hidden" name="query" value="{{ food.name }}">
+                <button type="submit"> 구매하기 </button>
+            </form>
             </div>
         </div>
     </main>
