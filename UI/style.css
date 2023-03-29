@@ -101,6 +101,7 @@ body {
 
   .slide.active{
     opacity: 1;
+    display:block;
   }
 
   .slide.hidden{

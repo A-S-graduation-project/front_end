@@ -4,7 +4,7 @@ let slides = document.querySelectorAll(".slide");
 
 // Set initial slide index and show first slide
 let slideIndex = 0;
-slides[slideIndex].style.display = "active";
+slides[slideIndex].classList.add("active");
 
 // Add event listeners to arrow buttons
 let prevButton = document.querySelector(".prev");
