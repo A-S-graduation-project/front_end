@@ -24,5 +24,6 @@ urlpatterns = [
     path('', mainviews.home, name='home'),
     path('about/', mainviews.about, name='about'),
     path('search/', searchviews.search, name='search'),
-    path('board/', boardviews.board, name='board')
+    path('board/', boardviews.board, name='board'),
+    path('detail/', searchviews.detail, name='detail')
 ]

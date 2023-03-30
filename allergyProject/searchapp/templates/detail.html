@@ -1,0 +1,155 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Online Food Shopping Mall</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+<!-- body -->
+
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="#"><h1>Allergy</h1></a>
+      </div>
+      <div class="search">
+        <form action="{% url 'search' %}" method="get">
+          <input type="text" placeholder="원하는 상품을 검색해보세요">
+          <button type="submit">Go</button>
+        </form>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'board' %}">Board</a></li>
+          <li><a href="{% static '#contact' %}">Login</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+     <!-- <div class="form-check" style="display:flex; flex-wrap:wrap; background-color: rgb(214, 239, 255); width: 60%; box-shadow: #b0b0b0 0px 0px 9px 0px; height: 80px;"> -->
+      <!-- <div> -->
+      <!-- <div style="margin-right:10px;">알레르기</div> -->
+      <!-- 아래의 코드를 반복하면 필터목록 추가 -->
+      <!-- <input type="checkbox" name="afilter" value="닭고기">
+      <label class="form-check-label" for="flexCheckDefault">
+        닭고기
+      </label>
+      <input type="checkbox" name="afilter" value="소고기">
+      <label class="form-check-label" for="flexCheckDefault">
+        소고기
+      </label>
+      <input type="checkbox" name="afilter" value="돼지고기">
+      <label class="form-check-label" for="flexCheckDefault">
+        돼지고기
+      </label>
+      <input type="checkbox" name="afilter" value="메밀">
+      <label class="form-check-label" for="flexCheckDefault">
+        메밀
+      </label>
+      <input type="checkbox" name="afilter" value="밀">
+      <label class="form-check-label" for="flexCheckDefault">
+        밀
+      </label>
+      <input type="checkbox" name="afilter" value="아몬드">
+      <label class="form-check-label" for="flexCheckDefault">
+        아몬드
+      </label>
+      <input type="checkbox" name="afilter" value="대두">
+      <label class="form-check-label" for="flexCheckDefault">
+        대두
+      </label>
+      <input type="checkbox" name="afilter" value="땅콩">
+      <label class="form-check-label" for="flexCheckDefault">
+        땅콩
+      </label>
+      <input type="checkbox" name="afilter" value="호두">
+      <label class="form-check-label" for="flexCheckDefault">
+        호두
+      </label>
+      <input type="checkbox" name="afilter" value="잣">
+      <label class="form-check-label" for="flexCheckDefault">
+        잣
+      </label>
+      <input type="checkbox" name="afilter" value="우유">
+      <label class="form-check-label" for="flexCheckDefault">
+        우유
+      </label>
+      <input type="checkbox" name="afilter" value="난류">
+      <label class="form-check-label" for="flexCheckDefault">
+        난류
+      </label>
+      <input type="checkbox" name="afilter" value="오징어">
+      <label class="form-check-label" for="flexCheckDefault">
+        오징어
+      </label>
+      <input type="checkbox" name="afilter" value="고등어">
+      <label class="form-check-label" for="flexCheckDefault">
+        고등어
+      </label>
+      <input type="checkbox" name="afilter" value="새우">
+      <label id="formcheck" class="form-check-label" for="flexCheckDefault">
+        새우
+      </label>
+      <input type="checkbox" name="afilter" value="게">
+      <label class="form-check-label" for="flexCheckDefault">
+        게
+      </label>
+      <input type="checkbox" name="afilter" value="조개류">
+      <label class="form-check-label" for="flexCheckDefault">
+        조개류
+      </label>
+      <input type="checkbox" name="afilter" value="복숭아">
+      <label class="form-check-label" for="flexCheckDefault">
+        복숭아
+      </label>
+      <input type="checkbox" name="afilter" value="토마토">
+      <label class="form-check-label" for="flexCheckDefault">
+        토마토
+      </label>
+      <input type="checkbox" name="afilter" value="아산화황">
+      <label class="form-check-label" for="flexCheckDefault">
+        아산화황
+      </label>
+    </div> -->
+<!-- about  -->
+<h1>Search results for "{{ query }}"</h1>
+<main>
+  <div class="food-details">
+      <!-- <img src="{% static 'food-image.jpg' %}" alt="Food Image"> -->
+      <img src="food2.jpg" alt="Food Image">
+      <div class="food-info">
+      <h2>Food Name</h2>
+      <p>Description information about the food.</p>
+      <form action="https://search.shopping.naver.com/search/all" method="GET">
+          <input type="hidden" name="query" value="{{ food.name }}">
+          <button type="submit"> 구매하기 </button>
+      </form>
+      </div>
+  </div>
+</main>
+  <div class="picture-grid">
+    {% for picture in pictures %}
+      <div class="picture">
+        <img src="{{ picture.image.url }}" alt="{{ picture.name }}">
+        <p>{{ picture.name }}</p>
+      </div>
+    {% endfor %}
+  </div>
+
+<!-- end abouts -->
+
+
+    <!--  footer -->
+    <footr>
+      
+    </footr>
+          <!-- end footer -->
+           <!-- Javascript files-->
+           <script src="{% static 'js/app.js' %}"></script>
+</body>
+</html>
