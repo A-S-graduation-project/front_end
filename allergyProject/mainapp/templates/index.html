@@ -11,25 +11,25 @@
 
 <body>
   <header>
-      <nav>
-        <div class="logo">
-          <a href="#"><h1>Allergy</h1></a>
-        </div>
-        <div class="search">
-          <form action="{% url 'search' %}" method="get">
-            <input type="text" placeholder="원하는 상품을 검색해보세요">
-            <button type="submit">Go</button>
-          </form>
-        </div>
-        <div class="menu">
-          <ul>
-            <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="{% url 'board' %}">Board</a></li>
-            <li><a href="{% static '#contact' %}">Login</a></li>
-          </ul>
-        </div>
-      </nav>
-     
+    <nav>
+      <div class="logo">
+        <a href="#"><h1>Allergy</h1></a>
+      </div>
+      <div class="search">
+        <form action="{% url 'search' %}" method="get">
+          <input type="text" placeholder="원하는 상품을 검색해보세요">
+          <button type="submit">Go</button>
+        </form>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'board' %}">Board</a></li>
+          <li><a href="{% static '#contact' %}">Login</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
      <!-- end header -->
      <div class="slideshow-container">
       {% for image in image %}
