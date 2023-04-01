@@ -13,16 +13,34 @@ prevButton.addEventListener("click", function() {changeSlide(1)});
 nextButton.addEventListener("click", function() {changeSlide(-1)});
 
 function changeSlide(n) {
-    // Hide current slide
-    slides[slideIndex].classList.remove("active");
-    // Update slide index
-    slideIndex += n;
-    // Loop to beginning if end is reached
-    if (slideIndex >= slides.length) {
-      slideIndex = 0;
-    } else if (slideIndex < 0) {
-      slideIndex = slides.length - 1;
-    }
-    // Show new slide
-    slides[slideIndex].classList.add("active");
+  // Hide current slide
+  slides[slideIndex].classList.remove("active");
+  
+  // Move current slide to prev or next position
+  if (n == -1) {
+    slides[slideIndex].classList.add("prev");
+  } else {
+    slides[slideIndex].classList.add("next");
   }
+  
+  // Update slide index
+  slideIndex += n;
+  
+  // Loop to beginning if end is reached
+  if (slideIndex >= slides.length) {
+    slideIndex = 0;
+  } else if (slideIndex < 0) {
+    slideIndex = slides.length - 1;
+  }
+  
+  // Move next slide to active position
+  if (n == -1) {
+    slides[slideIndex].classList.add("next");
+  } else {
+    slides[slideIndex].classList.add("prev");
+  }
+  
+  // Show new slide
+  slides[slideIndex].classList.remove("prev", "next");
+  slides[slideIndex].classList.add("active");
+}
