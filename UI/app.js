@@ -1,46 +1,31 @@
-// Get the slideshow container and slides
 let slideshowContainer = document.querySelector(".slideshow-container");
 let slides = document.querySelectorAll(".slide");
-
-// Set initial slide index and show first slide
 let slideIndex = 0;
-slides[slideIndex].classList.add("active");
 
-// Add event listeners to arrow buttons
-let prevButton = document.querySelector(".prev");
-let nextButton = document.querySelector(".next");
-prevButton.addEventListener("click", function() {changeSlide(1)});
-nextButton.addEventListener("click", function() {changeSlide(-1)});
+showSlides();
+
+function showSlides() {
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active");
+    slides[i].classList.add("hidden");
+  }
+
+  for (let i = slideIndex; i < slideIndex + 4; i++) {
+    if (i < slides.length) {
+      slides[i].classList.add("active");
+      slides[i].classList.remove("hidden");
+    }
+  }
+}
 
 function changeSlide(n) {
-  // Hide current slide
-  slides[slideIndex].classList.remove("active");
-  
-  // Move current slide to prev or next position
-  if (n == -1) {
-    slides[slideIndex].classList.add("prev");
-  } else {
-    slides[slideIndex].classList.add("next");
-  }
-  
-  // Update slide index
   slideIndex += n;
   
-  // Loop to beginning if end is reached
   if (slideIndex >= slides.length) {
     slideIndex = 0;
   } else if (slideIndex < 0) {
-    slideIndex = slides.length - 1;
+    slideIndex = slides.length - 4;
   }
   
-  // Move next slide to active position
-  if (n == -1) {
-    slides[slideIndex].classList.add("next");
-  } else {
-    slides[slideIndex].classList.add("prev");
-  }
-  
-  // Show new slide
-  slides[slideIndex].classList.remove("prev", "next");
-  slides[slideIndex].classList.add("active");
+  showSlides();
 }
