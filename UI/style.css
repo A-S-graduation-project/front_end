@@ -194,7 +194,7 @@ body {
 
   .prev, .next {
     position: absolute;
-    top: 50%;
+    top: 60%;
     transform: translateY(-100%);
     width: auto;
     padding: 16px;
