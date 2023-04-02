@@ -46,11 +46,11 @@ body {
   }
   
   /* Dropdown button */
-  .dropbtn {
+  .search .dropbtn {
     background-color: #f1f1f1;
     color: #333;
-    padding: 8px;
-    font-size: 14px;
+    padding: 13px 5px;
+    font-size: 0.5em;
     border: none;
     cursor: pointer;
   }
@@ -58,6 +58,7 @@ body {
   /* Dropdown content (hidden by default) */
   .dropdown-content {
     display: none;
+    font-size: 0.8em;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
