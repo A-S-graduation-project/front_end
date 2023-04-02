@@ -11,18 +11,28 @@
     <header>
       <nav>
         <div class="logo">
-          <a href="#"><h1>Allergen</h1></a>
+          <a href="food.jpg"><h1>Allergen</h1></a>
         </div>
         <div class="search">
           <form action="{% url 'search' %}" method="get">
             <input type="text" placeholder="원하는 상품을 검색해보세요">
             <button type="submit">Go</button>
+            <div class="dropdown">
+              <button class="dropbtn">알레르기</button>
+              <div class="dropdown-content">
+                <a href="#" class="allergen-btn" data-allergen="난류">난류</a>
+                <a href="#" class="allergen-btn" data-allergen="우유">우유</a>
+                <a href="#" class="allergen-btn" data-allergen="땅콩">땅콩</a>
+                <a href="#" class="allergen-btn" data-allergen="생선">생선</a>
+              </div>
+            </div>
           </form>
+          <div id="selected-allergens"></div>
         </div>
         <div class="menu">
           <ul>
             <li><a href="{% url 'board' %}">Board</a></li>
-            <li><a href="{% static '#contact' %}">Login</a></li>
+            <li><a href="{% static 'food.jpgcontact' %}">Login</a></li>
           </ul>
         </div>
       </nav>
