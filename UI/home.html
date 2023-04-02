@@ -33,39 +33,40 @@
         <!-- 
             {% for image in image %}
             <div class="slide">
+              <a href="{{ URL search }}">
               <img src="{{ image }}" alt="Slide {{ forloop.counter }}">
             </div>
             {% endfor %}
            -->
         <div class="slide">
-          <img src="allergy1.jpg" alt="Slide 1">
-          <div class="overlay">
-            <div class="text">Image 1</div>
-          </div>
+          <a href="{{ URL search }}">
+            <img src="allergy1.jpg" alt="Slide 1">
+            <div class="text">음식</div>
+          </a>
         </div>
         <div class="slide">
-          <img src="allergy2.jpg" alt="Slide 2">
-          <div class="overlay">
-            <div class="text">Image 2</div>
-          </div>
+          <a href="{{ URL search }}">
+            <img src="allergy2.jpg" alt="Slide 2">
+            <div class="text">음식</div>
+          </a>  
         </div>
         <div class="slide">
-          <img src="allergy3.jpg" alt="Slide 3">
-          <div class="overlay">
-            <div class="text">Image 3</div>
-          </div>
+          <a href="{{ URL search }}">
+            <img src="allergy3.jpg" alt="Slide 3">
+            <div class="text">음식</div>
+          </a>
         </div>
         <div class="slide">
-          <img src="allergy4.jpg" alt="Slide 2">
-          <div class="overlay">
-            <div class="text">Image 4</div>
-          </div>
+          <a href="{{ URL search }}">
+            <img src="allergy4.jpg" alt="Slide 2">
+            <div class="text">음식</div>
+          </a>
         </div>
         <div class="slide">
-          <img src="allergy5.jpg" alt="Slide 3">
-          <div class="overlay">
-            <div class="text">Image 5</div>
-          </div>
+          <a href="{{ URL search }}">
+            <img src="allergy5.jpg" alt="Slide 3">
+            <div class="text">음식</div>
+          </a>
         </div>
         <a class="prev" onclick="changeSlide(1)">&#10094;</a>
         <a class="next" onclick="changeSlide(-1)">&#10095;</a>

@@ -89,12 +89,12 @@ body {
   }
   
   .slide {
+    position: relative;
     float: left;
     box-sizing: border-box;
     width: 25%;
     padding: 10px;
     text-align: center;
-    top: 50%;
   }
 
   .slide.active{
@@ -111,9 +111,27 @@ body {
     height: auto;
     vertical-align: middle;
     object-fit: cover;
-    display: inline-block; /* display as inline block to center vertically */
+    display: block; /* display as inline block to center vertically */
   }
-  
+
+  .slide img:hover{
+    filter: brightness(50%);
+  }
+
+  .slide .text {
+    position: absolute;
+    color:#fff;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+  }
+
+  a:hover .text{
+    opacity: 1;
+  }
+
   .prev, .next {
     position: absolute;
     top: 50%;
