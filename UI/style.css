@@ -288,4 +288,12 @@ body {
   .food-info button:hover {
     background-color: #F27D23;
   }
+
+  .recommend{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
   

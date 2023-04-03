@@ -85,3 +85,7 @@ if (allergen) {
 // Append the allergen buttons container to the search form
 const searchForm = document.querySelector('.search form');
 searchForm.appendChild(allergenBtnsContainer);
+
+
+let myText = "{알러지}를 제외한 {음식}의 레시피는 ---입니다."
+document.getElementByID("recommend").innerHTML = myText;
