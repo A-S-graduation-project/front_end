@@ -38,47 +38,62 @@
       </nav>
     </header>
     <main>
-        <table>
-            <thead>
-              <tr>
-                <th>번호</th>
-                <th>제목</th>
-                <th>작성자</th>
-                <th>날짜</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td><a href="{% url 'post_detail' post.id %}">게시글 1</a></td>
-                <td>작성자 1</td>
-                <td>2023-04-04</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td><a href="{% url 'post_detail' post.id %}">게시글 2</a></td>
-                <td>작성자 2</td>
-                <td>2023-04-03</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td><a href="{% url 'post_detail' post.id %}">게시글 3</a></td>
-                <td>작성자 3</td>
-                <td>2023-04-02</td>
-              </tr>
-              <!-- 나머지 게시글 -->
-            </tbody>
-          </table>
-        
-    </main> 
-    <div class="pagination">
-        <!-- 이전 버튼 -->
-        <button id="prev-btn" disabled>이전</button>
-        <!-- 페이지 번호 버튼 -->
-        <span id="page-numbers"></span>
-        <!-- 다음 버튼 -->
-        <button id="next-btn">다음</button>
+      <div class="container">
+        <div class="post">
+          <a href="post.html">
+            <img src="thumbnail1.jpg" alt="Post 1 Thumbnail">
+            <h2>게시글 제목 1</h2>
+          </a>
         </div>
+        <div class="post">
+          <a href="post.html">
+            <img src="thumbnail2.jpg" alt="Post 2 Thumbnail">
+            <h2>게시글 제목 2</h2>
+          </a>
+        </div>
+        <div class="post">
+          <a href="post.html">
+            <img src="thumbnail3.jpg" alt="Post 3 Thumbnail">
+            <h2>게시글 제목 3</h2>
+          </a>
+        </div>
+        <div class="post">
+          <a href="post.html">
+            <img src="thumbnail1.jpg" alt="Post 1 Thumbnail">
+            <h2>게시글 제목 1</h2>
+          </a>
+        </div>
+        <div class="post">
+          <a href="post.html">
+            <img src="thumbnail2.jpg" alt="Post 2 Thumbnail">
+            <h2>게시글 제목 2</h2>
+          </a>
+        </div>
+        <div class="post">
+          <a href="post.html">
+            <img src="thumbnail3.jpg" alt="Post 3 Thumbnail">
+            <h2>게시글 제목 3</h2>
+          </a>
+        </div>
+        <div class="post">
+          <a href="post.html">
+            <img src="thumbnail1.jpg" alt="Post 1 Thumbnail">
+            <h2>게시글 제목 1</h2>
+          </a>
+        </div>
+        <div class="post">
+          <a href="post.html">
+            <img src="thumbnail2.jpg" alt="Post 2 Thumbnail">
+            <h2>게시글 제목 2</h2>
+          </a>
+        </div>
+        <div class="post">
+          <a href="post.html">
+            <img src="thumbnail3.jpg" alt="Post 3 Thumbnail">
+            <h2>게시글 제목 3</h2>
+          </a>
+        </div>
+    </main>
     <footer>
       <div class="color-blocks"></div>
     </footer>
