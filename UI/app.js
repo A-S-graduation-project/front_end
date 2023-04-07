@@ -30,6 +30,16 @@ function changeSlide(n) {
   showSlides();
 }
 
+// 버튼을 눌렀을떄
+document.querySelectorAll('.search-scope-btn').forEach(btn => {
+  btn.addEventListener('click', (event) => {
+    event.preventDefault(); // 기본 이벤트 동작 취소
+    const selectedScope = event.target.dataset.searchScope; // 선택한 검색 범위
+    const dropdownBtn = document.querySelector('.dropbtn'); // 드롭다운 버튼
+    dropdownBtn.textContent = event.target.textContent; // 드롭다운 버튼의 이름 변경
+  });
+});
+
 // Get the search input and selected-allergens element
 const searchInput = document.getElementById('search-input');
 const selectedAllergens = document.getElementById('selected-allergens');

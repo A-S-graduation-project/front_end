@@ -46,10 +46,11 @@ body {
   }
   
   /* Dropdown button */
-  .search .dropbtn {
-    background-color: #f1f1f1;
+  .search .dropbtn{
+    background-color: #f5f5f5;
     color: #333;
-    padding: 13px 5px;
+    width: 58px;
+    height: 38px;
     font-size: 0.5em;
     border: none;
     cursor: pointer;
@@ -80,7 +81,7 @@ body {
   }
 
   /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
+  .dropdown:hover .dropdown-content, .rangedropdown:hover .dropdown-content {
     display: block;
   }
 
@@ -100,7 +101,7 @@ body {
   }
 
   .search button {
-    padding: 10px;
+    padding: 8px;
     background-color: #333;
     color: #fff;
     border: none;
