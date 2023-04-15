@@ -222,3 +222,16 @@ function renderPaginationButtons(currentPage, totalPages) {
   pagination.appendChild(nextButton);
   }
 }
+
+const loginButton = document.querySelector('#login-button');
+const sidebar = document.querySelector('#sidebar');
+
+loginButton.addEventListener('click', () => {
+  loginButton.textContent = '내정보';
+  loginButton.href = '#mypage';
+
+  loginButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    sidebar.style.display = 'block';
+  })
+})
