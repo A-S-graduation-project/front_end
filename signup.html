@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>회원 가입</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+    .signup-form {
+      max-width: 300px;
+      margin: 100px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .signup-form h1 {
+      text-align: center;
+      color: #333;
+    }
+    .signup-form input[type="text"],
+    .signup-form input[type="email"],
+    .signup-form input[type="password"] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: none;
+      border-bottom: 1px solid #ccc;
+      background-color: #f0f0f0;
+      border-radius: 0;
+    }
+    .signup-form input[type="text"]:focus,
+    .signup-form input[type="email"]:focus,
+    .signup-form input[type="password"]:focus {
+      background-color: #e1e1e1;
+    }
+    .signup-form input[type="submit"] {
+      width: 100%;
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .signup-form input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    .signup-form p {
+      text-align: center;
+      margin-top: 16px;
+      color: #777;
+    }
+    .signup-form .error-msg {
+      color: #f00;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-form">
+    <h1>회원 가입</h1>
+    <form onsubmit="return validateForm()">
+      <input type="text" placeholder="사용자명" name="username" id="username" required>
+      <input type="email" placeholder="이메일" name="email" id="email" required>
+      <input type="password" placeholder="비밀번호" name="password" id="password" required>
+      <input type="password" placeholder="비밀번호 확인" name="password-confirm" id="password-confirm" required>
+      <span id="password-confirm-error" class="error-msg"></span>
+      <input type="submit" value="회원 가입">
+    </form>
+    <p>이미 회원이신가요? <a href="#">로그인</a></p>
+  </div>
+  <script>
+    function validateForm() {
+      var username = document.getElementById('username').value;
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+      var passwordConfirm = document.getElementById('password-confirm').value;
+      var error = false;
+
+        // 비밀번호 확인 체크
+      if (password !== passwordConfirm) {
+        document.getElementById('password-confirm-error').innerText = '비밀번호가 일치하지 않습니다.';
+        error = true;
+      } else {
+        document.getElementById('password-confirm-error').innerText = '';
+      }
+
+      if (error) {
+        return false; // 에러가 있을 경우 폼 제출 방지
+      }
+
+      // 폼이 정상적으로 검증되었을 경우, 회원가입 처리 로직 추가
+
+      return true;
+    }
+  </script>
+</body>
+</html>
