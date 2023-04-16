@@ -44,10 +44,12 @@
         </div>
       </nav>
     </header>
-    <h1>나의 정보</h1>
-        <div>
-            {{ username }}님께서 가입하신 회원 정보입니다.
-        </div>
+    <div style="margin:1% 15%">
+        <h1>나의 정보</h1>
+            <div>
+                {{ username }}님께서 가입하신 회원 정보입니다.
+            </div>
+    </div>
     <main class="mypage">
         <aside id="sidebar">
             <li>내정보</li>
@@ -57,62 +59,79 @@
         <div>필수 회원 정보</div>
         <section>
             <div>
+              <div>
                 <div>
-                    <div>
-                        <h3>이름</h3>
-                    </div>
-                    <div>
-                        <div>{{ username }}</div>
-                        <div>
-                            <button>수정</button>
-                        </div>
-                    </div>
-                </div> 
+                  <h3>이름</h3>
+                </div>
+                <div>
+                  <!-- {% if editing %}
+                  <div>
+                    <input type="text" value="{{ username }}" />
+                  </div>
+                  <div>
+                    <button class="confirm">확인</button>
+                    <button class="cancel">취소</button>
+                  </div>
+                  {% else %} -->
+                  <div>{{ username }}</div>
+                  <div>
+                    <button class="edit">수정</button>
+                  </div>
+                  <!-- {% endif %} -->
+                </div>
+              </div> 
             </div>
-        </section>
-        <section>
+          </section>
+          <section>
             <div>
+              <div>
                 <div>
-                    <div>
-                        <h3>이름</h3>
-                    </div>
-                    <div>
-                        <div>{{ username }}</div>
-                        <div>
-                            <button>수정</button>
-                        </div>
-                    </div>
-                </div> 
+                  <h3>생년월일</h3>
+                </div>
+                <div>
+                  <!-- {% if editing %}
+                  <div>
+                    <input type="text" value="{{ username }}" />
+                  </div>
+                  <div>
+                    <button class="confirm">확인</button>
+                    <button class="cancel">취소</button>
+                  </div>
+                  {% else %} -->
+                  <div>{{ userbirth }}</div>
+                  <div>
+                    <button class="edit">수정</button>
+                  </div>
+                  <!-- {% endif %} -->
+                </div>
+              </div> 
             </div>
-        </section><section>
+          </section>
+          <section>
             <div>
+              <div>
                 <div>
-                    <div>
-                        <h3>이름</h3>
-                    </div>
-                    <div>
-                        <div>{{ username }}</div>
-                        <div>
-                            <button>수정</button>
-                        </div>
-                    </div>
-                </div> 
-            </div>
-        </section><section>
-            <div>
+                  <h3>이메일</h3>
+                </div>
                 <div>
-                    <div>
-                        <h3>이름</h3>
-                    </div>
-                    <div>
-                        <div>{{ username }}</div>
-                        <div>
-                            <button>수정</button>
-                        </div>
-                    </div>
-                </div> 
+                  <!-- {% if editing %}
+                  <div>
+                    <input type="text" value="{{ username }}" />
+                  </div>
+                  <div>
+                    <button class="confirm">확인</button>
+                    <button class="cancel">취소</button>
+                  </div>
+                  {% else %} -->
+                  <div>{{ useremail }}</div>
+                  <div>
+                    <button class="edit">수정</button>
+                  </div>
+                  <!-- {% endif %} -->
+                </div>
+              </div> 
             </div>
-        </section>
+          </section>
         <!-- <ul>    
             <li>이름 :</li>
             <li>이메일</li>

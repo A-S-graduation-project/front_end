@@ -143,9 +143,11 @@ body {
   }
   
   .mypage{
+    background-color: #f7f7f7;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin: 0 15%;
   }
 
   .mypage section > div{
@@ -169,6 +171,17 @@ body {
     width: 200px;
     background-color: #eee;
   }
+
+  section{
+    border-bottom: solid 3px #fff;
+  }
+  
+  section input {
+    width: 100%;
+    padding: 4px;
+    font-size: 16px;
+  }
+  
 
   .slideshow-container {
     position: relative;
