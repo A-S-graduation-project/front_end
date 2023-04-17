@@ -142,6 +142,47 @@ body {
     justify-content: center;
   }
   
+  .mypage{
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 15%;
+  }
+
+  .mypage section > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .mypage section button{
+    float: right;
+    clear: both;
+  }
+
+  .mypage aside {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 200px;
+    background-color: #eee;
+  }
+
+  section{
+    border-bottom: solid 3px #fff;
+  }
+  
+  section input {
+    width: 100%;
+    padding: 4px;
+    font-size: 16px;
+  }
+  
+
   .slideshow-container {
     position: relative;
     width: 100%;
