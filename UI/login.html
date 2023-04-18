@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>로그인</title>
+  <meta charset="utf-8">
+  <title>Online Food Shopping Mall</title>
+  <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="logo">
+            <a href="food.jpg"><h1>Allergen</h1></a>
+          </div>
+          <div class="search">
+            <form action="{% url 'search' %}" method="get">
+              <div class="rangedropdown">
+                <button class="dropbtn">검색범위</button>
+                <div class="dropdown-content">
+                  <a href="#" class="search-scope-btn" data-search-scope="all">전체</a>
+                  <a href="#" class="search-scope-btn" data-search-scope="board">게시판</a>
+                  <a href="#" class="search-scope-btn" data-search-scope="food">식품</a>
+                </div>
+              </div>
+              <input type="text" placeholder="원하는 상품을 검색해보세요">
+              <button type="submit">검색</button>
+              <div class="dropdown">
+                <button class="dropbtn">알레르기</button>
+                <div class="dropdown-content">
+                  <a href="#" class="allergen-btn" data-allergen="난류">난류</a>
+                  <a href="#" class="allergen-btn" data-allergen="우유">우유</a>
+                  <a href="#" class="allergen-btn" data-allergen="땅콩">땅콩</a>
+                  <a href="#" class="allergen-btn" data-allergen="생선">생선</a>
+                </div>
+              </div>
+            </form>
+            <div id="selected-allergens"></div>
+          </div>
+          <div class="menu">
+            <ul>
+              <li><a href="{% url 'board' %}">Board</a></li>
+              <li><a href="{% static 'food.jpgcontact' %}">Login</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+  <div class="login-form">
+    <h1>로그인</h1>
+    <form>
+      <input type="text" placeholder="사용자명" name="username" required>
+      <input type="password" placeholder="비밀번호" name="password" required>
+      <input type="submit" value="로그인">
+    </form>
+    <p>아직 회원이 아니신가요? <a href="#">회원가입</a></p>
+  </div>
+</body>
+</html>
