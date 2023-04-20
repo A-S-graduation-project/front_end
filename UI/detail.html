@@ -50,12 +50,15 @@
             <!-- <img src="{% static 'food-image.jpg' %}" alt="Food Image"> -->
             <img src="food2.jpg" alt="Food Image">
             <div class="food-info">
-            <h2>Food Name</h2>
-            <p>Description information about the food.</p>
-            <form action="https://search.shopping.naver.com/search/all" method="GET">
-                <input type="hidden" name="query" value="{{ food.name }}">
-                <button type="submit"> 구매하기 </button>
-            </form>
+              <h2>Food Name</h2>
+              <p>Description information about the food.</p>
+              <form action="https://search.shopping.naver.com/search/all" method="GET">
+                  <input type="hidden" name="query" value="{{ food.name }}">
+                  <button class="buy" type="submit"> 구매하기 </button>
+              </form>
+              <div class="like-button-container">
+                <button class="like-button" aria-label="Like"></button>
+              </div>
             </div>
         </div>
     </main>
